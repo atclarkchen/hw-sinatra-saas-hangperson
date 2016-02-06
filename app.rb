@@ -6,6 +6,10 @@ class HangpersonApp < Sinatra::Base
 
   enable :sessions
   register Sinatra::Flash
+
+  # get '/' do
+  #   "<!DOCTYPE html><html><head></head><body><h1>Hello World</h1></body></html>"
+  # end
   
   before do
     @game = session[:game] || HangpersonGame.new('')
